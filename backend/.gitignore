@@ -23,3 +23,5 @@ uploads/*
 .vscode/
 *.swp
 *.swo
+*.exe
+server
