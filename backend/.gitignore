@@ -1,0 +1,25 @@
+# 설정 파일 (시크릿 포함)
+config.yaml
+
+# 빌드 결과물
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# 테스트 관련
+*.test
+*.out
+coverage.txt
+
+# 업로드 파일
+uploads/*
+!uploads/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

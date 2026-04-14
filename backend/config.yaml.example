@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+database:
+  host: localhost
+  port: 5432
+  user: kcp
+  password: kcppassword
+  dbname: plugin
+  sslmode: disable
+
+jwt:
+  secret: "your-secret-key-here"
+  access_token_ttl: 3600      # 1시간 (초)
+  refresh_token_ttl: 604800    # 7일 (초)
+
+upload:
+  max_file_size: 52428800      # 50MB
+  allowed_extensions:
+    - .zip
+    - .tar.gz
+  screenshot_max_size: 5242880 # 5MB
+  screenshot_extensions:
+    - .png
+    - .jpg
+    - .jpeg
