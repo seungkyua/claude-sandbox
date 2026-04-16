@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-// API 기본 URL
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api/v1'
+// API 기본 URL — Next.js rewrites를 통해 프록시하므로 상대 경로 사용
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api/v1'
 
 // Axios 인스턴스 생성
 const api = axios.create({
@@ -39,7 +39,7 @@ api.interceptors.response.use(
           : null
 
         if (refreshToken) {
-          const response = await axios.post(`${BASE_URL}/auth/refresh`, {
+          const response = await axios.post('/api/v1/auth/refresh', {
             refresh_token: refreshToken,
           })
 
