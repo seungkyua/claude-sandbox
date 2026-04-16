@@ -1,5 +1,10 @@
 {
   "enabledPlugins": {
     "simple-e2e@simple-e2e-plugins": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m ':*)"
+    ]
   }
 }
